@@ -24,12 +24,12 @@ const HotelBookingForm = () => {
     const orderId = Math.random().toString(36).substr(2, 9);
 
     // Generate a payment link using the crypto payment gateway
-    const apiKey = 'your-api-key'; // Replace with your actual API key
-    const apiSecret = 'your-api-secret'; // Replace with your actual API secret
+    const apiKey = 'api-key'; // Replace with your actual API key
+    const apiSecret = 'api-secret'; // Replace with your actual API secret
     const nonce = Date.now().toString();
     const message = `orderId=${orderId}&totalCost=${totalCost}&nonce=${nonce}`;
     const signature = CryptoJS.HmacSHA256(message, apiSecret).toString(CryptoJS.enc.Hex);
-    const paymentLink = `https://your-payment-gateway.com/api/v1/payments?apiKey=${apiKey}&orderId=${orderId}&totalCost=${totalCost}&nonce=${nonce}&signature=${signature}&cryptoAddress=${cryptoAddress}`;
+    const paymentLink = `https://payment-gateway.com/api/v1/payments?apiKey=${apiKey}&orderId=${orderId}&totalCost=${totalCost}&nonce=${nonce}&signature=${signature}&cryptoAddress=${cryptoAddress}`;
 
     // Redirect the user to the payment page
     window.location.href = paymentLink;
