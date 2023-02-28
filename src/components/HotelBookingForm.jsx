@@ -37,6 +37,9 @@ const HotelBookingForm = () => {
 
   return (
     <div className='container'>
+        <div className='header1'>
+            <h1>Hotel Booking</h1>
+        </div>
     <form className={styles.form} onSubmit={handleSubmit}>
       <label className={styles.label}>
         Name:

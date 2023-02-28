@@ -1,6 +1,4 @@
 # Getting Started with Create React App
-# my-hotel-boking-form
- hotel booking form with React.js and a crypto payment gateway integration:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
